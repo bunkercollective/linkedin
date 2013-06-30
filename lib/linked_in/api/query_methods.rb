@@ -23,6 +23,11 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def company_status_updates(options = {})
+        path   = "#{company_path(options)}/updates?event-type=status-update"
+        simple_query(path, options)
+      end
+
       def job(options = {})
         path = jobs_path(options)
         simple_query(path, options)
