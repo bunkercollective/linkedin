@@ -25,7 +25,7 @@ module LinkedIn
 
       def company_status_updates(options = {})
         path   = "/companies/#{options[:id]}/updates?event-type=status-update"
-        simple_query(path, options)
+        simple_query(path, {})
       end
 
       def job(options = {})
